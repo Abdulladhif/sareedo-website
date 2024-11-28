@@ -1,0 +1,85 @@
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 40vw;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
+    border-radius: 0.3rem;
+}
+
+.slides-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1.5s ease; /* Fade effect */
+}
+
+.slide.active {
+    opacity: 1; /* Show active slide */
+}
+
+.card {
+    width: 40vw;
+    height: 450px;
+    border-radius: 0.2rem;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
+}
+.card img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Additional styling for indicators and buttons */
+.indicators {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.9s ease;
+}
+
+.indicator.active {
+    background-color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+    .card,
+    .carousel-container  {
+        width: 92vw;
+        height:340px;
+    }
+    
+  }
+
+  @media (min-width: 600px) and (max-width: 1000px){
+    .card,
+    .carousel-container  {
+        width: 92vw;
+        height:340px;
+    }
+  }

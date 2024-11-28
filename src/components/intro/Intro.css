@@ -1,0 +1,84 @@
+.intro{
+    /* height: 100vh; */
+    background: #f2f1ff57;
+    padding: 4rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.intro-content{
+    width: 45vw;
+}
+.intro-content h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #091057;
+}
+
+.intro-btn{
+    margin-top: 1rem;
+}
+
+.intro-btn button{
+    background: #0D1664;
+    border: none;
+    border-radius: 10rem;
+    padding: 0.7rem 1rem;
+    min-width: 170px; 
+    width: fit-content;
+    text-align: center;
+    padding: 0.8rem 0.8rem;
+    transition: background 0.6s ease,  color 0.6s ease, border 0.6s ease;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    justify-content: center;
+    color: #e9e9e9;
+    text-transform: capitalize;
+     cursor: pointer;
+     font-size: 1rem;
+}
+.intro-btn button:hover{
+    background: transparent;
+    border: 1.5px solid #30a5ff; 
+    color: #30a5ff;
+}
+
+
+
+
+
+  @media only screen and (max-width: 600px) {
+    .intro{
+        padding: 1.4rem;
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+    .intro-content{
+        width: 92vw;
+    }
+    .intro-btn button{
+        width: 92vw;
+        margin: 0.5rem 0;
+    }
+    .intro-icon{
+        display: none;
+    }
+    .int-btn {
+       margin-top: 1.2rem !important;
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 1000px){
+    .intro{
+        padding: 1.6rem;
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+    .intro-content{
+        width: 92vw;
+    }
+}

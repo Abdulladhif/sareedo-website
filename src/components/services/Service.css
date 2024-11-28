@@ -1,0 +1,32 @@
+.services{
+    background: #f2f1ff26;
+    padding: 2rem 4rem;
+}
+.service-content{
+    margin-top: 1.4rem;
+}
+
+@media only screen and (max-width: 600px){
+    .services{
+        padding: 1.4rem;
+        padding-bottom: 2rem;
+}
+.line {
+    width: 22vw;
+}
+.category-link{
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+}
+
+@media (min-width: 600px) and (max-width: 1000px){
+    .services{
+        padding: 1.6rem;
+        padding-bottom: 2rem;
+} 
+.line {
+    width: 28vw;
+}  
+}

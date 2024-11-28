@@ -1,0 +1,191 @@
+.contact{
+    padding: 4rem;
+    background: #f2f1ff26;
+}
+form{
+    margin-top: 1.4rem;
+    display: flex;
+    /* align-items: center; */
+    gap: 1.5rem;
+    justify-content: space-between;
+    position: relative;
+}
+.ctc-m,
+.map{
+    width: 43.96vw;
+}
+.map-container{
+    margin-top: 1.3rem;
+}
+.map{
+   min-height: 275px;
+}
+
+.ctc-m-content{
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.ctc-card{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    width: 21vw;
+    min-height: 120px;
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    min-width: 250px;
+    background-color: #f2f1ff;
+    border-radius: 0.2rem;
+    text-align: center;
+}
+.ctc-card h5{
+    font-size: 1.2rem;
+    color: #091057;
+}
+.ctc-card p{
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #091057;
+}
+.ctc-icon{
+    font-size: 1.3rem; 
+    color: #091057;
+}
+
+.ctc-inputs{
+    width: 43.96vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.form-control{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.form-control label{
+    color: #091057;
+    font-weight: 600;
+}
+.form-control input,
+.form-control textarea{
+    border-radius: 0.2rem;
+    outline: none;
+    padding: 0.7rem 1rem;
+    border: 1.5px solid rgba(39, 11, 68, 0.50);
+    background-color: transparent;
+    font-weight: 500;
+    color: #091057;
+}
+::placeholder{
+    color: #091057;
+}
+.form-control textarea{
+    resize: none;
+    min-height: 200px;
+}
+
+.user-name{
+text-transform: capitalize;
+}
+
+.success {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #091057;;
+    height: fit-content;
+    width: 33vw;
+    padding: 1rem;
+    gap: 1rem;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 0.3rem;
+}
+
+.succ-icon{
+    color: rgb(51, 183, 51);
+    font-size: 1.9rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .contact{
+        padding: 1.4rem;
+    }
+    form{
+        margin-top: 1.4rem;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        justify-content:center;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+    .ctc-inputs,
+    .map{
+        width: 92vw;
+    }
+    .ctc-m-content{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 1.3rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .ctc-card,
+    .ctc-m{
+
+        width: 92vw;
+  }
+  .form-control textarea{
+    resize: none;
+    min-height: 200px;
+    margin-bottom: 0;
+    padding-bottom: -2rem;
+}
+.intro-btn{
+margin-top: 0;
+}
+.success{
+    width: 90vw;
+    top: 60%; 
+}
+}
+
+@media (min-width: 600px) and (max-width: 1000px){
+    .contact{
+        padding: 1.6rem;
+    } 
+    form{
+        margin-top: 1.4rem;
+       flex-direction: column;
+    }
+    .ctc-inputs,
+    .ctc-m{
+        width: 100%;
+    }
+    .ctc-m{
+       margin-top: 1.4rem;
+    }
+
+    .ctc-card{
+        width: 30vw;
+        min-width: 45vw;
+    }
+    .map{
+        width: 100%;
+    }
+    .success{
+        width: 70vw; 
+        padding: 1.3rem;
+    }
+}
