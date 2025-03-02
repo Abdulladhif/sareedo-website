@@ -17,8 +17,7 @@ const Intro = () => {
     <div className='intro'>
 
       <div className="intro-content">
-        <h1>SAREEDO delivers excellence in Transportation, Warehousing, and Car & Truck Rentals, ensuring smooth logistics, secure storage, and reliable vehicle options for all your needs. Trust us to handle the details, so you can focus on a seamless and efficient experience every time</h1>
-
+        <h1> Dedicated to uplifting communities through education, empowerment, and sustainable development. SAREEDO is committed to creating opportunities, fostering growth, and making a lasting impact through our initiatives.</h1>
         <div className="intro-btn int-btn">
           <button onClick={scrollToContact}>
             Contact us
