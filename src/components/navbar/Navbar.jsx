@@ -49,7 +49,7 @@ const Navbar = () => {
         </li>
         <li className="items nav-btn">
           <button onClick={(e) => scrollToSection('contact', e)}>
-            Book us
+            Contact Us
             <MdOutlineArrowForwardIos className='intro-icon' />
           </button>
         </li>
