@@ -1,60 +1,102 @@
-.about{
-    padding:4rem;
+/* Base styling for the about section */
+.about {
+    padding: 4rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-}
-.line{
-    width: 200px;
-    height: 2px;
-    background-color: #cfd2f35d;
-}
-.heading-container{
-    display: flex;
     align-items: center;
-    gap: 2rem;
-}
-h2{
+  }
+  
+  p {
+    line-height: 22px;
+    color: #091057;
+  }
+  
+  h2 {
     font-size: 1.4rem;
     color: #091057;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-}
-p{
-    line-height: 22px;
-    color: #091057;
-}
-
-.category-link {
+  }
+  
+  /* 
+     org-children = <ul> that holds siblings at the same level
+     We'll display them side-by-side (flex row)
+  */
+  .org-children {
     display: flex;
+    flex-direction: row; /* siblings horizontally */
+    justify-content: center;
+    list-style-type: none;
+    margin: 20px 0;
+    padding-left: 0;
+  }
+  
+  /* Each sibling is an org-node, which may have a box and possibly children below */
+  .org-node {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 2rem;
-}
-
-h3 {
-    color: #091057;
-    padding-bottom: 1rem;
-}
-
-.category-link h3:hover {
-    color: #30a5ff;
-    cursor: pointer;
-}
-
-.category-link h3.active {
-    border-bottom: 3px solid #091057;;
-    color: #30a5ff;
-}
-
-@media only screen and (max-width: 600px){
-    .about{
-        padding:1.6rem;
-    }  
-}
-
-@media (min-width: 600px) and (max-width: 1024px){
-    .about{
-        padding:1.9rem;
-    }     
-}
+    margin: 0 30px; /* horizontal gap between siblings */
+    position: relative;
+  }
+  
+  /* The person's box (UML-like) */
+  .person-box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  /* Person text styling */
+  .person-info p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #444;
+  }
+  
+  /* Icons for gender */
+  .icon-male {
+    color: blue;
+    font-size: 1.4em;
+  }
+  
+  .icon-female {
+    color: purple;
+    font-size: 1.4em;
+  }
+  
+  /* Vertical connector to subordinates */
+  .vertical-connector {
+    width: 2px;
+    height: 20px;
+    background: black;
+    margin: 0 auto;
+  }
+  
+  /* Responsive adjustments */
+  @media only screen and (max-width: 600px) {
+    .about {
+      padding: 1.6rem;
+    }
+  
+    .org-node {
+      margin: 0 10px;
+    }
+  }
+  
+  @media (min-width: 600px) and (max-width: 1024px) {
+    .about {
+      padding: 1.9rem;
+    }
+  
+    .org-node {
+      margin: 0 15px;
+    }
+  }
+  
