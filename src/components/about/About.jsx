@@ -3,6 +3,102 @@ import "./About.css";
 import { FaMale, FaFemale } from "react-icons/fa";
 
 // Paste the final `directory` array above or here
+const directory = [
+  // Top-level
+  {
+    name: "Ahmed Salad N.",
+    role: "Board of Director",
+    gender: "male",
+    reportsTo: null,
+  },
+  {
+    name: "Ahmed A. Ahmed",
+    role: "Executive Director",
+    gender: "male",
+    reportsTo: "Ahmed Salad N.",
+  },
+  {
+    name: "Abdirahman Mohamed Hussein",
+    role: "Chairman",
+    gender: "male",
+    reportsTo: "Ahmed A. Ahmed",
+  },
+
+  // Two direct subordinates under Abdirahman Mohamed Hussein
+  {
+    name: "Abdirizack Ahmed Salad",
+    role: "Finance & Admin Manager",
+    gender: "male",
+    reportsTo: "Abdirahman Mohamed Hussein",
+  },
+  {
+    name: "Abdirisaq Somane Garan",
+    role: "Secretary",
+    gender: "male",
+    reportsTo: "Abdirahman Mohamed Hussein",
+  },
+
+  // Leila under Abdirizack Ahmed Salad
+  {
+    name: "Leila Aden Dabar",
+    role: "Assistant",
+    gender: "female",
+    reportsTo: "Abdirizack Ahmed Salad",
+  },
+
+  // Four direct subordinates under Abdirisaq Somane Garan
+  {
+    name: "Ahmed Hassan Jama",
+    role: "Program Manager",
+    gender: "male",
+    reportsTo: "Abdirisaq Somane Garan",
+  },
+  {
+    name: "Shamsa Mohamud",
+    role: "Logistic & Supply Chain Manager",
+    gender: "female",
+    reportsTo: "Abdirisaq Somane Garan",
+  },
+  {
+    name: "Mahad Abdisalam",
+    role: "Head of Communication",
+    gender: "male",
+    reportsTo: "Abdirisaq Somane Garan",
+  },
+  {
+    name: "Abdi Omar Abdullahi",
+    role: "HR Manager",
+    gender: "male",
+    reportsTo: "Abdirisaq Somane Garan",
+  },
+
+  // Subordinates of those four
+  {
+    name: "Maryan Ali Garad",
+    role: "Program Officer",
+    gender: "female",
+    reportsTo: "Ahmed Hassan Jama",
+  },
+  {
+    name: "Mohamed Bare",
+    role: "Logistic Assistant",
+    gender: "male",
+    reportsTo: "Shamsa Mohamud",
+  },
+  {
+    name: "Faiza D. Abdullahi",
+    role: "Communication Assistant",
+    gender: "female",
+    reportsTo: "Mahad Abdisalam",
+  },
+  {
+    name: "Mohamed Adan Jibril",
+    role: "HR Officer",
+    gender: "male",
+    reportsTo: "Abdi Omar Abdullahi",
+  },
+];
+
 
 function renderHierarchy(parentName) {
   // Gather direct children
