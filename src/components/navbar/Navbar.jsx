@@ -3,7 +3,7 @@ import '../navbar/Navbar.css';
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { LiaWindowCloseSolid } from "react-icons/lia";
-import Logo from '../../assets/mlogo1.png';
+import Logo from '../../assets/mlogo3.jpeg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -9,7 +9,16 @@ const About = () => {
             <h2>About Us</h2>
             <div className="line"></div>
         </div>
-        <p>At SAREEDO, we are committed to delivering exceptional solutions in transportation, warehousing, and vehicle rentals. Our team ensures every detail is handled with precision, from secure storage and efficient logistics to reliable car and truck rental options tailored to your needs. Driven by a passion for excellence and a dedication to customer satisfaction, SAREEDO is here to support your goals with seamless, dependable service. Whether it’s moving goods, storing inventory, or providing the right vehicle, SAREEDO has you covered!</p>
+        <p>Sareedo Community Development Organization is a non-partisan non-governmental and non-profit 
+making humanitarian and development organization that was established in October 21st, 2007. 
+The Organization was founded by a group of long-term serving community elders, agricultural experts, 
+environmental health specialists, educational experts, and community development activists with an 
+overall objective of providing the basic needs of the community. 
+SAREEDO is aimed to tackle the humanitarian crisis including droughts and disaster prevention in 
+Somalia. Develops community basic social services needs and creates opportunities and income 
+generation projects for the most vulnerable members of the community including IDPs, poor rural 
+communities, Youth, Women, children, farmers to reduce the level of poverty and contribute to National 
+Development Goals!</p>
     </div>
        
     </>
