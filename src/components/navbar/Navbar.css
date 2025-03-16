@@ -2,7 +2,7 @@ nav{
     background: #dddbff63;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
     justify-content: space-between;
-    padding: 1.3rem 4rem;
+    padding: 1rem 2rem;
     position: relative;
 }
 nav,
@@ -12,7 +12,7 @@ nav,
 }
 /* Logo Styling */
 .logo-img {
-    width: 170px;
+    width: 60px;
     height: 70px; /* Fixed height */
     object-fit: cover; /* Ensures it maintains aspect ratio */
     border-radius: 10px; /* Rounded edges */
@@ -26,7 +26,7 @@ nav,
     font-size: 1.4rem;
 }
 .nav-items{
- gap: 8rem;
+ gap: 5rem;
 }
 .items a{
     color: #091057;
@@ -40,6 +40,7 @@ transition: color 0.6s ease;
  color: #30a5ff;
 }
 .nav-btn button{
+ padding: 0.5rem 0.7rem; /* Reduce padding */
  display: flex;
  align-items: center;
  gap: 0.6rem;
