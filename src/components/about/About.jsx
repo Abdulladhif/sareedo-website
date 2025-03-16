@@ -138,6 +138,10 @@ function renderHierarchy(parentName) {
 const About = () => {
   return (
     <div className="about">
+      <div className="heading-container">
+        <h2>Who are We</h2>
+        <div className="line"></div>
+      </div> 
       {/* Intro paragraphs above the chart */}
       <p>
         Sareedo Community Development Organization (SCDO) is a non-partisan,
