@@ -4,7 +4,6 @@ import Navbar from '../../components/navbar/Navbar';
 import Intro from '../../components/intro/Intro';
 import About from '../../components/about/About';
 import Service from '../../components/services/Service';
-import Testimonial from '../../components/testimonials/Testimonial';
 import Contact from '../../components/contact/Contact';
 import Social from '../../components/socialIcons/Socials';
 import Footer from '../../components/footer/Footer';
