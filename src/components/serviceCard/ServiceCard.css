@@ -1,56 +1,163 @@
-.service-card{
-    width: 21vw;
-    background-color: #f2f1ff;
-    height: auto;
-    min-height: 280px;
-    border-radius: 5px;
-
-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+.service-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(127, 176, 105, 0.1);
 }
 
-.service-card-img{
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-green);
+}
+
+.service-card-img {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.service-card-img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(45, 80, 22, 0.1) 0%, rgba(127, 176, 105, 0.1) 100%);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card:hover .service-card-img::before {
+  opacity: 1;
+}
+
+.service-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-card-img img {
+  transform: scale(1.05);
+}
+
+.service-card-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.service-card-content h4 {
+  color: var(--primary-green);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.service-card-content p {
+  color: var(--medium-gray);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+.service-card-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(127, 176, 105, 0.1);
+}
+
+.service-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-green);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.service-card-link:hover {
+  color: var(--accent-green);
+  gap: 0.75rem;
+}
+
+.service-card-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--gradient-secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-card-icon {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Category-specific styling */
+.service-card.climate-adaptation {
+  border-left: 4px solid #3498DB;
+}
+
+.service-card.sustainable-agriculture {
+  border-left: 4px solid #27AE60;
+}
+
+.service-card.water-management {
+  border-left: 4px solid #2980B9;
+}
+
+.service-card.renewable-energy {
+  border-left: 4px solid #F39C12;
+}
+
+@media (max-width: 768px) {
+  .service-card-img {
     height: 180px;
-    border-radius: 0.3rem;
-}
-.service-card-img img{
-    height: 100%;
-    width: 100%;
-    display: block;
-    border-top-left-radius: 0.3rem;
-    border-top-right-radius: 0.3rem;
-}
-.service-card-content{
-    padding: 1.3rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-}
-h4{
-    color: #270B44;
-}
-
-@media only screen and (max-width: 600px) {
-    .service-card{
-        width: 92vw;
-        background-color: #270b4416;
-        height: auto;
-        min-height: 200px;
-    }
-    .service-card-content{
-        justify-content: center;
-    }
-    .service-card-img{
-        height: 200px;
-        border-radius: 0.3rem;
-    }
   }
+  
+  .service-card-content {
+    padding: 1.25rem;
+  }
+  
+  .service-card-content h4 {
+    font-size: 1.1rem;
+  }
+  
+  .service-card-content p {
+    font-size: 0.9rem;
+  }
+}
 
-  @media (min-width: 600px) and (max-width: 1000px){
-    .service-card{
-        width: 45vw;
-        background-color: #270b4416;
-        height: auto;
-        min-height: 350px;
-        
-    }
+@media (max-width: 480px) {
+  .service-card-img {
+    height: 160px;
+  }
+  
+  .service-card-content {
+    padding: 1rem;
+  }
+  
+  .service-card-content h4 {
+    font-size: 1rem;
+  }
 }

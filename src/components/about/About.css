@@ -1,132 +1,360 @@
-/* Base styling for the about section */
 .about {
-    padding: 4rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-.line {
-    width: 28vw;
-}  
-.heading-container{
+  background: linear-gradient(135deg, #f8fffe 0%, #f0f9f7 100%);
+  padding: var(--spacing-2xl) 0;
+  position: relative;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23A4C3A2" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%237FB069" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.about-header h2 {
+  font-size: 2.5rem;
+  color: var(--primary-green);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.about-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--gradient-secondary);
+  border-radius: 2px;
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  color: var(--medium-gray);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.about-text {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
   gap: 2rem;
 }
-  p {
-    line-height: 22px;
-    color: #091057;
-  }
-  
-  h2 {
-    font-size: 1.4rem;
-    color: #091057;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-  }
-  
-  /* 
-     org-children = <ul> that holds siblings at the same level
-     We'll display them side-by-side (flex row)
-  */
-  .org-children {
-    display: flex;
-    flex-direction: row; /* siblings horizontally */
-    justify-content: center;
-    list-style-type: none;
-    margin: 20px 0;
-    padding-left: 0;
-  }
-  
-  /* Each sibling is an org-node, which may have a box and possibly children below */
-  .org-node {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 30px; /* horizontal gap between siblings */
-    position: relative;
-  }
-  
-  /* The person's box (UML-like) */
-  .person-box {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    border: 2px solid #000;
-    border-radius: 8px;
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-  }
-  
-  /* Person text styling */
-  .person-info p {
-    margin: 0;
-    font-size: 0.9em;
-    color: #444;
-  }
-  
-  /* Icons for gender */
-  .icon-male {
-    color: blue;
-    font-size: 1.4em;
-  }
-  
-  .icon-female {
-    color: purple;
-    font-size: 1.4em;
-  }
-  
-  /* Vertical connector to subordinates */
-  .vertical-connector {
-    width: 2px;
-    height: 20px;
-    background: black;
-    margin: 0 auto;
-  }
-  .about ul,
-.about ol {
-  padding-left: 1.5rem; /* Ensures indentation for bullets/numbers */
-  margin-top: 0.5rem;
+
+.about-section {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--accent-green);
+  transition: all 0.3s ease;
+}
+
+.about-section:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.about-section h3 {
+  color: var(--primary-green);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.about-section p {
+  color: var(--medium-gray);
+  line-height: 1.7;
   margin-bottom: 1rem;
 }
 
-.about ul li,
-.about ol li {
-  margin-bottom: 0.5rem;
+.about-section ul,
+.about-section ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.about-section li {
+  margin-bottom: 0.75rem;
   line-height: 1.6;
-  list-style-type: disc; /* Use 'decimal' for ol if needed */
+  color: var(--medium-gray);
 }
 
-.about ol {
-  list-style-type: decimal;
+.about-section li strong {
+  color: var(--primary-green);
+  font-weight: 600;
 }
 
-.category-link {
-    display: flex;
+.about-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.impact-stats {
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.impact-stats h3 {
+  color: var(--white);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(10px);
+}
+
+.stat-card h4 {
+  font-size: 2rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.stat-card p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.mission-vision {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.mission-card,
+.vision-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.mission-card {
+  border-top: 4px solid var(--primary-green);
+}
+
+.vision-card {
+  border-top: 4px solid var(--accent-green);
+}
+
+.mission-card:hover,
+.vision-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.mission-card h3,
+.vision-card h3 {
+  color: var(--primary-green);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.org-chart {
+  margin-top: 4rem;
+  background: var(--white);
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.org-chart h2 {
+  text-align: center;
+  color: var(--primary-green);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.org-children {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  margin: 20px 0;
+  padding-left: 0;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.org-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 0 1rem;
+}
+
+.person-box {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  border: 2px solid var(--primary-green);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.5rem;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  min-width: 250px;
+}
+
+.person-box:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-green);
+}
+
+.person-info strong {
+  color: var(--primary-green);
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.person-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--medium-gray);
+}
+
+.icon-male {
+  color: var(--sky-blue);
+  font-size: 1.5rem;
+}
+
+.icon-female {
+  color: #e74c3c;
+  font-size: 1.5rem;
+}
+
+.vertical-connector {
+  width: 2px;
+  height: 30px;
+  background: var(--accent-green);
+  margin: 1rem auto;
+}
+
+@media (max-width: 1024px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .mission-vision {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 0 1rem;
+  }
+  
+  .about-header h2 {
+    font-size: 2rem;
+  }
+  
+  .about-header p {
+    font-size: 1.1rem;
+  }
+  
+  .about-section,
+  .impact-stats,
+  .mission-card,
+  .vision-card {
+    padding: 1.5rem;
+  }
+  
+  .org-chart {
+    padding: 2rem 1rem;
+  }
+  
+  .org-children {
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 2rem;
+  }
+  
+  .person-box {
+    min-width: 200px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
-  
-  /* Responsive adjustments */
-  @media only screen and (max-width: 600px) {
-    .about {
-      padding: 1.6rem;
-    }
-  
-    .org-node {
-      margin: 0 10px;
-    }
+
+@media (max-width: 480px) {
+  .about-header h2 {
+    font-size: 1.75rem;
   }
   
-  @media (min-width: 600px) and (max-width: 1024px) {
-    .about {
-      padding: 1.9rem;
-    }
-  
-    .org-node {
-      margin: 0 15px;
-    }
+  .about-section h3,
+  .mission-card h3,
+  .vision-card h3 {
+    font-size: 1.2rem;
   }
   
+  .person-box {
+    min-width: 180px;
+    padding: 0.75rem 1rem;
+  }
+  
+  .person-info strong {
+    font-size: 0.9rem;
+  }
+  
+  .person-info p {
+    font-size: 0.8rem;
+  }
+}

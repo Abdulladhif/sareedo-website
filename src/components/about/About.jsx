@@ -2,9 +2,7 @@ import React from "react";
 import "./About.css";
 import { FaMale, FaFemale } from "react-icons/fa";
 
-// Paste the final `directory` array above or here
 const directory = [
-  // Top-level
   {
     name: "Ahmed Salad N.",
     role: "Board of Director",
@@ -23,8 +21,6 @@ const directory = [
     gender: "male",
     reportsTo: "Ahmed A. Ahmed",
   },
-
-  // Two direct subordinates under Abdirahman Mohamed Hussein
   {
     name: "Abdirizack Ahmed Salad",
     role: "Finance & Admin Manager",
@@ -37,16 +33,12 @@ const directory = [
     gender: "male",
     reportsTo: "Abdirahman Mohamed Hussein",
   },
-
-  // Leila under Abdirizack Ahmed Salad
   {
     name: "Leila Aden Dabar",
     role: "Assistant",
     gender: "female",
     reportsTo: "Abdirizack Ahmed Salad",
   },
-
-  // Four direct subordinates under Abdirisaq Somane Garan
   {
     name: "Ahmed Hassan Jama",
     role: "Program Manager",
@@ -71,8 +63,6 @@ const directory = [
     gender: "male",
     reportsTo: "Abdirisaq Somane Garan",
   },
-
-  // Subordinates of those four
   {
     name: "Maryan Ali Garad",
     role: "Program Officer",
@@ -99,9 +89,7 @@ const directory = [
   },
 ];
 
-
 function renderHierarchy(parentName) {
-  // Gather direct children
   const children = directory.filter(
     (person) => person.reportsTo === parentName
   );
@@ -111,7 +99,6 @@ function renderHierarchy(parentName) {
     <ul className="org-children">
       {children.map((child) => (
         <li key={child.name} className="org-node">
-          {/* Person Box */}
           <div className="person-box">
             {child.gender === "male" ? (
               <FaMale className="icon-male" />
@@ -124,7 +111,6 @@ function renderHierarchy(parentName) {
             </div>
           </div>
 
-          {/* If this person has subordinates, show vertical connector + recursion */}
           {directory.some((p) => p.reportsTo === child.name) && (
             <div className="vertical-connector" />
           )}
@@ -138,51 +124,113 @@ function renderHierarchy(parentName) {
 const About = () => {
   return (
     <div className="about">
-      <div className="heading-container">
-        <h2>Who are We</h2>
-        <div className="line"></div>
-      </div> 
-      {/* Intro paragraphs above the chart */}
-           <section>
-                <p>
-                  Sareedo Community Development Organization (SCDO) is an independent, nonprofit, and non-governmental organization dedicated to improving the lives of vulnerable communities across Somalia. We provide expert project management, research, and development solutions in key focus areas such as livelihoods, economic inclusion, climate change, social development, protection, and good governance.
-                  Founded by a team of multi-disciplinary Somali experts, SCDO delivers insightful and objective analysis on a wide range of social issues including conflict dynamics, peacebuilding, drought response, and resilience strategies—particularly for youth, women, internally displaced persons (IDPs), and impoverished rural communities.
-                </p>
-              </section>
+      <div className="about-container">
+        <div className="about-header">
+          <h2>Who We Are</h2>
+          <p>
+            Leading Somalia's fight against climate change through innovative solutions, 
+            community empowerment, and sustainable development initiatives.
+          </p>
+        </div>
 
-              <section>
-                <h3>What We Do</h3>
-                <ul>
-                  <li><strong>Climate-Resilient Development Projects:</strong> We design and implement comprehensive programs that build community resilience against climate change impacts, focusing on drought-resistant agriculture, water conservation, and sustainable livelihood alternatives for vulnerable populations.</li>
-                  <li><strong>Climate Research & Policy Advocacy:</strong> Our research team conducts in-depth studies on climate adaptation strategies, environmental degradation patterns, and community-based solutions. We advocate for evidence-based climate policies that protect Somalia's most vulnerable communities.</li>
-                  <li><strong>Community Climate Education:</strong> We organize climate awareness campaigns, training workshops, and community forums to educate local populations about climate change impacts, adaptation strategies, and sustainable practices that can be implemented at the household and community level.</li>
-                  <li><strong>Strategic Climate Partnerships:</strong> We collaborate with international climate organizations, UN agencies, and local environmental groups to leverage resources, share knowledge, and scale climate adaptation solutions across Somalia's diverse ecological zones.</li>
-                </ul>
-              </section>
+        <div className="about-content">
+          <div className="about-text">
+            <div className="about-section">
+              <h3>Our Mission</h3>
+              <p>
+                Sareedo Community Development Organization (SCDO) is an independent, nonprofit organization 
+                dedicated to building climate resilience across Somalia. We empower vulnerable communities 
+                through expert project management, research, and development solutions focused on climate 
+                adaptation, sustainable livelihoods, and environmental protection.
+              </p>
+            </div>
 
-              <section>
-                <h3>Our Strategic Focus Areas</h3>
-                <ol>
-                  <li>
-                    <strong>Climate Adaptation & Resilient Livelihoods:</strong> Building climate-smart agricultural systems, promoting drought-resistant crops, and developing alternative income sources for communities affected by climate variability. We focus on enhancing food security through sustainable farming practices and water-efficient technologies.
-                  </li>
-                  <li>
-                    <strong>Climate-Sensitive Social Protection:</strong> Developing early warning systems and emergency response protocols for climate-related disasters. We ensure vulnerable populations, especially women and children, have access to climate-resilient shelters, clean water, and healthcare services during extreme weather events.
-                  </li>
-                  <li>
-                    <strong>Environmental Health & Sustainable Development:</strong> Promoting renewable energy solutions, improving water resource management, and establishing climate-resilient infrastructure. We work to ensure communities have sustainable access to clean energy, water, and sanitation systems that can withstand climate impacts.
-                  </li>
-                  <li>
-                    <strong>Climate Governance & Policy:</strong> Advocating for inclusive climate policies and supporting local governance structures in developing climate adaptation plans. We strengthen community participation in environmental decision-making and promote transparent resource management for climate resilience.
-                  </li>
-                  <li>
-                    <strong>Climate Research & Innovation:</strong> Conducting cutting-edge research on climate impacts, adaptation technologies, and community-based solutions. We develop innovative approaches to climate challenges and foster knowledge exchange between communities, researchers, and policymakers to scale effective climate solutions.
-                  </li>
-                </ol>
-              </section>   
+            <div className="about-section">
+              <h3>What We Do</h3>
+              <ul>
+                <li><strong>Climate-Resilient Development:</strong> Comprehensive programs building community resilience against climate impacts through drought-resistant agriculture and sustainable alternatives.</li>
+                <li><strong>Environmental Research:</strong> In-depth studies on climate adaptation strategies and community-based solutions for policy advocacy.</li>
+                <li><strong>Community Education:</strong> Climate awareness campaigns and training workshops on sustainable practices.</li>
+                <li><strong>Strategic Partnerships:</strong> Collaborating with international organizations to scale climate solutions across Somalia.</li>
+              </ul>
+            </div>
+          </div>
 
-      <h2>SAREEDO Organization Chart</h2>
-      {renderHierarchy(null)}
+          <div className="about-visual">
+            <div className="impact-stats">
+              <h3>Our Impact</h3>
+              <div className="stats-grid">
+                <div className="stat-card">
+                  <h4>50+</h4>
+                  <p>Communities Served</p>
+                </div>
+                <div className="stat-card">
+                  <h4>15K+</h4>
+                  <p>Lives Impacted</p>
+                </div>
+                <div className="stat-card">
+                  <h4>25+</h4>
+                  <p>Climate Projects</p>
+                </div>
+                <div className="stat-card">
+                  <h4>8</h4>
+                  <p>Years Experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="about-section">
+          <h3>Our Strategic Focus Areas</h3>
+          <ol>
+            <li>
+              <strong>Climate Adaptation & Resilient Livelihoods:</strong> Building climate-smart agricultural systems, 
+              promoting drought-resistant crops, and developing alternative income sources for communities affected by 
+              climate variability.
+            </li>
+            <li>
+              <strong>Climate-Sensitive Social Protection:</strong> Developing early warning systems and emergency 
+              response protocols for climate-related disasters, ensuring vulnerable populations have access to 
+              climate-resilient services.
+            </li>
+            <li>
+              <strong>Environmental Health & Sustainable Development:</strong> Promoting renewable energy solutions, 
+              improving water resource management, and establishing climate-resilient infrastructure.
+            </li>
+            <li>
+              <strong>Climate Governance & Policy:</strong> Advocating for inclusive climate policies and supporting 
+              local governance structures in developing climate adaptation plans.
+            </li>
+            <li>
+              <strong>Climate Research & Innovation:</strong> Conducting cutting-edge research on climate impacts, 
+              adaptation technologies, and community-based solutions.
+            </li>
+          </ol>
+        </div>
+
+        <div className="mission-vision">
+          <div className="mission-card">
+            <h3>Our Vision</h3>
+            <p>
+              A climate-resilient Somalia where communities thrive despite environmental challenges, 
+              with sustainable livelihoods and adaptive capacity to face future climate impacts.
+            </p>
+          </div>
+          <div className="vision-card">
+            <h3>Our Values</h3>
+            <p>
+              Sustainability, community empowerment, innovation, transparency, and collaborative 
+              partnerships that drive meaningful climate action and environmental protection.
+            </p>
+          </div>
+        </div>
+
+        <div className="org-chart">
+          <h2>SAREEDO Organization Chart</h2>
+          {renderHierarchy(null)}
+        </div>
+      </div>
     </div>
   );
 };

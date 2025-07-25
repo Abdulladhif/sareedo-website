@@ -10,45 +10,49 @@ import IMG7 from '../../assets/pic6.jpeg';
 
 const Health = () => {
   return (
-    <div>
-        <div className="tsp-wrapper">
-            <div className='tsp-container'>
-                <ServiceCard 
-                    image={IMG1} 
-                    title="Rainwater Harvesting" 
-                    description="Installation of systems to collect and store rainwater for household and agricultural use during dry seasons." 
-                    />
-                <ServiceCard 
-                    image={IMG4}
-                    title="Groundwater Management"
-                    description="Sustainable extraction and conservation of groundwater resources through community-based management systems."
-                    />
-                <ServiceCard 
-                    image={IMG3}
-                    title="Water Purification Systems"
-                    description="Implementation of clean water technologies to ensure safe drinking water access for rural communities."
-                    />
-                <ServiceCard 
-                    image={IMG2}
-                    title="Watershed Protection"
-                    description="Conservation and restoration of natural watersheds to maintain water quality and availability."
-                    />
-            </div>
-            <div className='tsp-container2'>
-                <ServiceCard 
-                    image={IMG6}
-                    title="Water-Efficient Infrastructure"
-                    description="Development of climate-resilient water infrastructure that can withstand extreme weather events."
-                    />
-                <ServiceCard 
-                    image={IMG7}
-                    title="Community Water Governance"
-                    description="Training local communities in water resource management and establishing sustainable governance structures."
-                    />
-            </div>
+    <div className="health-services">
+      <div className="services-grid">
+        <ServiceCard 
+          image={IMG1} 
+          title="Rainwater Harvesting" 
+          description="Installation of systems to collect and store rainwater for household and agricultural use during dry seasons." 
+          category="water-management"
+        />
+        <ServiceCard 
+          image={IMG4}
+          title="Groundwater Management"
+          description="Sustainable extraction and conservation of groundwater resources through community-based management systems."
+          category="water-management"
+        />
+        <ServiceCard 
+          image={IMG3}
+          title="Water Purification Systems"
+          description="Implementation of clean water technologies to ensure safe drinking water access for rural communities."
+          category="water-management"
+        />
+        <ServiceCard 
+          image={IMG2}
+          title="Watershed Protection"
+          description="Conservation and restoration of natural watersheds to maintain water quality and availability."
+          category="water-management"
+        />
+      </div>
+      <div className="services-grid-2">
+        <ServiceCard 
+          image={IMG6}
+          title="Water-Efficient Infrastructure"
+          description="Development of climate-resilient water infrastructure that can withstand extreme weather events."
+          category="water-management"
+        />
+        <ServiceCard 
+          image={IMG7}
+          title="Community Water Governance"
+          description="Training local communities in water resource management and establishing sustainable governance structures."
+          category="water-management"
+        />
+      </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
-export default Health
+export default Health;

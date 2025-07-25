@@ -6,8 +6,14 @@ import Health from '../health/Health';
 import Cars from '../cars/Cars';
 
 const Service = () => {
-  // Set "Transportation" as the default active category
   const [activeCategory, setActiveCategory] = useState("Climate Adaptation");
+
+  const categories = [
+    "Climate Adaptation",
+    "Sustainable Agriculture", 
+    "Water Management",
+    "Renewable Energy"
+  ];
 
   const handleCategoryClick = (category) => {
     setActiveCategory(category);
@@ -15,27 +21,33 @@ const Service = () => {
 
   return (
     <div className='services'>
-      <div className="heading-container">
-        <h2>Our Services</h2>
-        <div className="line"></div>
-      </div> 
-      <div className="category-link">
-        {["Climate Adaptation", "Sustainable Agriculture", "Water Management", "Renewable Energy"].map((category) => (
-          <h3
-            key={category}
-            onClick={() => handleCategoryClick(category)}
-            className={activeCategory === category ? 'active' : ''}
-          >
-            {category}
-          </h3>
-        ))}
-      </div>
+      <div className="services-container">
+        <div className="services-header">
+          <h2>Our Services</h2>
+          <p>
+            Comprehensive climate solutions designed to build resilience, promote sustainability, 
+            and empower communities across Somalia to adapt to environmental challenges.
+          </p>
+        </div>
+        
+        <div className="category-tabs">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => handleCategoryClick(category)}
+              className={`category-tab ${activeCategory === category ? 'active' : ''}`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
 
-      <div className="service-content">
-        {activeCategory === "Climate Adaptation" && <Education />}
-        {activeCategory === "Sustainable Agriculture" && <Livelihood />}
-        {activeCategory === "Water Management" && <Health />}
-        {activeCategory === "Renewable Energy" && <Cars />}
+        <div className="service-content">
+          {activeCategory === "Climate Adaptation" && <Education />}
+          {activeCategory === "Sustainable Agriculture" && <Livelihood />}
+          {activeCategory === "Water Management" && <Health />}
+          {activeCategory === "Renewable Energy" && <Cars />}
+        </div>
       </div>
     </div>
   );
