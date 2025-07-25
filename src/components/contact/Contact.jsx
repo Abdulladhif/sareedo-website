@@ -50,7 +50,7 @@ const Contact = () => {
       // Create the mailto link with pre-filled subject and body
       const subject = encodeURIComponent(`New Message from ${formData.name}`);
       const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nMessage: ${formData.message}`);
-      const mailtoLink = `mailto:events@fancytam.co.za?subject=${subject}&body=${body}`;
+      const mailtoLink = `mailto:info@sareedocd.org?subject=${subject}&body=${body}`;
 
       // Open the default email client (Gmail if set as default)
       window.location.href = mailtoLink;
@@ -91,19 +91,19 @@ const Contact = () => {
             <div className="ctc-card">
               <MdEmail className="ctc-icon" />
               <h5>Email</h5>
-              <p>example@gmail.com</p>
+              <p>info@sareedocd.org</p>
             </div>
 
             <div className="ctc-card">
               <BsHouseFill className='ctc-icon' />
-              <h5>Our Business</h5>
-              <p>12 Aug street Phake</p>
+              <h5>Our Office</h5>
+              <p>Mogadishu, Somalia</p>
             </div>
           </div>
           <div className="map-container">
             <iframe
               className='map'
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.442708978085!2d18.507707511327535!3d-33.878250473111244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5fda8b61a707%3A0xe7021c8b55883d0b!2sInospace%20-%20Creation%20Works!5e0!3m2!1sen!2sza!4v1731608792332!5m2!1sen!2sza"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127334.03264348!2d45.2872!2d2.0469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3d58424c8b8b8b8b%3A0x8b8b8b8b8b8b8b8b!2sMogadishu%2C%20Somalia!5e0!3m2!1sen!2s!4v1731608792332!5m2!1sen!2s"
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

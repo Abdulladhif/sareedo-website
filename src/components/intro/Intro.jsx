@@ -17,7 +17,7 @@ const Intro = () => {
     <div className='intro'>
 
       <div className="intro-content">
-        <h1> Dedicated to uplifting communities through education, empowerment, and sustainable development. SAREEDO is committed to creating opportunities, fostering growth, and making a lasting impact through our initiatives.</h1>
+        <h1>Building Climate Resilience for Somalia's Future. SAREEDO is dedicated to empowering communities with sustainable solutions to combat climate change, enhance food security, and create adaptive livelihoods that withstand environmental challenges.</h1>
         <div className="intro-btn int-btn">
           <button onClick={scrollToContact}>
             Contact us

@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import '../services/Service.css';
-import Transport from '../transportation/Transport';
-import Warehousing from '../warehousing/Warehousing';
+import Education from '../education/Education';
+import Livelihood from '../livelihood/Livelihood';
+import Health from '../health/Health';
 import Cars from '../cars/Cars';
 
 const Service = () => {
   // Set "Transportation" as the default active category
-  const [activeCategory, setActiveCategory] = useState("Transportation");
+  const [activeCategory, setActiveCategory] = useState("Climate Adaptation");
 
   const handleCategoryClick = (category) => {
     setActiveCategory(category);
@@ -19,7 +20,7 @@ const Service = () => {
         <div className="line"></div>
       </div> 
       <div className="category-link">
-        {["Education", "Livelihood Support", "Humanitarian Aid", "Health Services"].map((category) => (
+        {["Climate Adaptation", "Sustainable Agriculture", "Water Management", "Renewable Energy"].map((category) => (
           <h3
             key={category}
             onClick={() => handleCategoryClick(category)}
@@ -31,9 +32,10 @@ const Service = () => {
       </div>
 
       <div className="service-content">
-        {activeCategory === "Education" && <Education />}
-        {activeCategory === "Livelihood Support" && <Livelihood />}
-        {activeCategory === "Health Services" && <Health />}
+        {activeCategory === "Climate Adaptation" && <Education />}
+        {activeCategory === "Sustainable Agriculture" && <Livelihood />}
+        {activeCategory === "Water Management" && <Health />}
+        {activeCategory === "Renewable Energy" && <Cars />}
       </div>
     </div>
   );

@@ -153,10 +153,10 @@ const About = () => {
               <section>
                 <h3>What We Do</h3>
                 <ul>
-                  <li><strong>Design & Implement Development Projects:</strong> We manage humanitarian and development programs that support both rural and urban vulnerable groups.</li>
-                  <li><strong>Research & Policy Advocacy:</strong> Our dedicated research department investigates topics including governance, democracy, agricultural practices, climate change, and water technology to influence policy and guide humanitarian action.</li>
-                  <li><strong>Public Forums & Debates:</strong> We organize community discussions, forums, and conferences bringing together activists, media, academics, and policymakers to seek sustainable, locally-driven solutions to pressing social challenges.</li>
-                  <li><strong>Partnerships:</strong> We collaborate with international NGOs, UN agencies, and local institutions to design, implement, and scale impact-driven programs that align with community needs and national priorities.</li>
+                  <li><strong>Climate-Resilient Development Projects:</strong> We design and implement comprehensive programs that build community resilience against climate change impacts, focusing on drought-resistant agriculture, water conservation, and sustainable livelihood alternatives for vulnerable populations.</li>
+                  <li><strong>Climate Research & Policy Advocacy:</strong> Our research team conducts in-depth studies on climate adaptation strategies, environmental degradation patterns, and community-based solutions. We advocate for evidence-based climate policies that protect Somalia's most vulnerable communities.</li>
+                  <li><strong>Community Climate Education:</strong> We organize climate awareness campaigns, training workshops, and community forums to educate local populations about climate change impacts, adaptation strategies, and sustainable practices that can be implemented at the household and community level.</li>
+                  <li><strong>Strategic Climate Partnerships:</strong> We collaborate with international climate organizations, UN agencies, and local environmental groups to leverage resources, share knowledge, and scale climate adaptation solutions across Somalia's diverse ecological zones.</li>
                 </ul>
               </section>
 
@@ -164,19 +164,19 @@ const About = () => {
                 <h3>Our Strategic Focus Areas</h3>
                 <ol>
                   <li>
-                    <strong>Livelihoods, Climate Change & Economic Inclusion:</strong> Enhancing food security, resilience, and economic participation for IDPs, vulnerable households, and climate-affected communities through innovation and sustainable solutions.
+                    <strong>Climate Adaptation & Resilient Livelihoods:</strong> Building climate-smart agricultural systems, promoting drought-resistant crops, and developing alternative income sources for communities affected by climate variability. We focus on enhancing food security through sustainable farming practices and water-efficient technologies.
                   </li>
                   <li>
-                    <strong>Social Protection:</strong> Ensuring women and children have access to safe, timely, and effective services while raising awareness on gender-based violence, reproductive health, and child protection.
+                    <strong>Climate-Sensitive Social Protection:</strong> Developing early warning systems and emergency response protocols for climate-related disasters. We ensure vulnerable populations, especially women and children, have access to climate-resilient shelters, clean water, and healthcare services during extreme weather events.
                   </li>
                   <li>
-                    <strong>Social Development:</strong> Improving equitable access to quality healthcare, education, clean water, and sanitation services, while contributing to Somali human capital development.
+                    <strong>Environmental Health & Sustainable Development:</strong> Promoting renewable energy solutions, improving water resource management, and establishing climate-resilient infrastructure. We work to ensure communities have sustainable access to clean energy, water, and sanitation systems that can withstand climate impacts.
                   </li>
                   <li>
-                    <strong>Good Governance & Democracy:</strong> Strengthening trust between citizens and government by supporting inclusive political structures, local governance, federalism, and democratic values.
+                    <strong>Climate Governance & Policy:</strong> Advocating for inclusive climate policies and supporting local governance structures in developing climate adaptation plans. We strengthen community participation in environmental decision-making and promote transparent resource management for climate resilience.
                   </li>
                   <li>
-                    <strong>Research & Development:</strong> Conducting high-impact research to inform policy and humanitarian programs and fostering partnerships with local and international research institutions to exchange knowledge.
+                    <strong>Climate Research & Innovation:</strong> Conducting cutting-edge research on climate impacts, adaptation technologies, and community-based solutions. We develop innovative approaches to climate challenges and foster knowledge exchange between communities, researchers, and policymakers to scale effective climate solutions.
                   </li>
                 </ol>
               </section>   

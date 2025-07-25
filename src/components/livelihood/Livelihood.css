@@ -1,0 +1,40 @@
+.tsp-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* default setting for larger screens */
+}
+
+.tsp-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.tsp-container2{
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .tsp-container {
+        flex-direction: column;
+        gap: 1.4rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .tsp-container2{
+       flex-direction: column;
+       justify-content: center;
+        gap: 1.3rem;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+    .tsp-container {
+        display: flex;
+        flex-wrap: wrap; /* allows wrapping in this range */
+        gap: 1.6rem;
+    }
+}

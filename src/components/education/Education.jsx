@@ -9,46 +9,46 @@ import IMG6 from '../../assets/pic5.jpeg';
 import IMG7 from '../../assets/pic6.jpeg';
 
 const Education = () => {
-    return (
-      <div>Education</div>
-    )
-  }
-// const Education = () => {
-//   return (
-//     <div> hi
-//         {/* <div className="tsp-wrapper">
-//             <div className='tsp-container'>
-//                 <ServiceCard 
-//                     image={IMG1} 
-//                     title="Education Programs" 
-//                     description="Providing quality education opportunities." 
-//                     />
-//                 <ServiceCard 
-//                     image={IMG4}
-//                     title="Last-Mile Delivery"
-//                     />
-//                 <ServiceCard 
-//                     image={IMG3}
-//                     title="Warehousing & Distribution"
-//                     />
-//                 <ServiceCard 
-//                     image={IMG4}
-//                     title="Logistics Management"
-//                     />
-//             </div>
-//             <div className='tsp-container2'>
-//                 <ServiceCard 
-//                     image={IMG6}
-//                     title="Specialized Transportation"
-//                     />
-//                 <ServiceCard 
-//                     image={IMG7}
-//                     title="Shuttle & Employee Transportation"
-//                     />
-//             </div>
-//     </div> */}
-//     </div>
-//   )
-// }
+  return (
+    <div>
+        <div className="tsp-wrapper">
+            <div className='tsp-container'>
+                <ServiceCard 
+                    image={IMG1} 
+                    title="Climate Risk Assessment" 
+                    description="Comprehensive analysis of climate vulnerabilities and adaptation strategies for communities and ecosystems." 
+                    />
+                <ServiceCard 
+                    image={IMG4}
+                    title="Early Warning Systems"
+                    description="Advanced monitoring and alert systems for drought, floods, and extreme weather events to protect vulnerable populations."
+                    />
+                <ServiceCard 
+                    image={IMG3}
+                    title="Community Resilience Building"
+                    description="Training programs and capacity building initiatives to strengthen community preparedness for climate impacts."
+                    />
+                <ServiceCard 
+                    image={IMG2}
+                    title="Climate Education Programs"
+                    description="Educational initiatives to raise awareness about climate change impacts and promote sustainable practices."
+                    />
+            </div>
+            <div className='tsp-container2'>
+                <ServiceCard 
+                    image={IMG6}
+                    title="Ecosystem Restoration"
+                    description="Reforestation and land rehabilitation projects to restore degraded environments and enhance carbon sequestration."
+                    />
+                <ServiceCard 
+                    image={IMG7}
+                    title="Climate Policy Support"
+                    description="Technical assistance for developing and implementing local climate adaptation and mitigation policies."
+                    />
+            </div>
+    </div>
+    </div>
+  )
+}
 
 export default Education
