@@ -66,7 +66,7 @@ This message was sent from the SAREEDO website contact form.
                 </div>
                 <h5>Phone</h5>
                 <p>
-                  <a href="tel:+27623488050">+27 62 348 8050</a>
+                  <a href="tel:+27623488050">+27 83 483 7112</a>
                 </p>
               </div>
 
