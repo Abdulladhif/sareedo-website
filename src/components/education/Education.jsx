@@ -37,20 +37,7 @@ const Education = () => {
           category="climate-adaptation"
         />
       </div>
-      <div className="services-grid-2">
-        <ServiceCard 
-          image={IMG6}
-          title="Ecosystem Restoration"
-          description="Reforestation and land rehabilitation projects to restore degraded environments and enhance carbon sequestration."
-          category="climate-adaptation"
-        />
-        <ServiceCard 
-          image={IMG7}
-          title="Climate Policy Support"
-          description="Technical assistance for developing and implementing local climate adaptation and mitigation policies."
-          category="climate-adaptation"
-        />
-      </div>
+  {/* Removed services-grid-2 as requested */}
     </div>
   );
 };

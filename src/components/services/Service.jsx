@@ -4,11 +4,13 @@ import Education from '../education/Education';
 import Livelihood from '../livelihood/Livelihood';
 import Health from '../health/Health';
 import Cars from '../cars/Cars';
+import PeaceUnity from './PeaceUnity';
 
 const Service = () => {
-  const [activeCategory, setActiveCategory] = useState("Climate Adaptation");
+  const [activeCategory, setActiveCategory] = useState("Peace & Unity");
 
   const categories = [
+    "Peace & Unity",
     "Climate Adaptation",
     "Sustainable Agriculture", 
     "Water Management",
@@ -43,6 +45,7 @@ const Service = () => {
         </div>
 
         <div className="service-content">
+          {activeCategory === "Peace & Unity" && <PeaceUnity />}
           {activeCategory === "Climate Adaptation" && <Education />}
           {activeCategory === "Sustainable Agriculture" && <Livelihood />}
           {activeCategory === "Water Management" && <Health />}

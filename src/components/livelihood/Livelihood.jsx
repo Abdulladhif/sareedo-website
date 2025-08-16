@@ -37,20 +37,7 @@ const Livelihood = () => {
           category="sustainable-agriculture"
         />
       </div>
-      <div className="services-grid-2">
-        <ServiceCard 
-          image={IMG6}
-          title="Agroforestry Programs"
-          description="Integrated tree-crop systems that improve soil health, provide additional income, and enhance carbon storage."
-          category="sustainable-agriculture"
-        />
-        <ServiceCard 
-          image={IMG7}
-          title="Farmer Training & Support"
-          description="Comprehensive training programs on sustainable agricultural practices and climate adaptation techniques."
-          category="sustainable-agriculture"
-        />
-      </div>
+  {/* Removed services-grid-2 as requested */}
     </div>
   );
 };

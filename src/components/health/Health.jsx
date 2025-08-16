@@ -37,20 +37,7 @@ const Health = () => {
           category="water-management"
         />
       </div>
-      <div className="services-grid-2">
-        <ServiceCard 
-          image={IMG6}
-          title="Water-Efficient Infrastructure"
-          description="Development of climate-resilient water infrastructure that can withstand extreme weather events."
-          category="water-management"
-        />
-        <ServiceCard 
-          image={IMG7}
-          title="Community Water Governance"
-          description="Training local communities in water resource management and establishing sustainable governance structures."
-          category="water-management"
-        />
-      </div>
+  {/* Removed services-grid-2 as requested */}
     </div>
   );
 };

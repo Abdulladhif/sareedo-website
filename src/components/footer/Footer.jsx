@@ -62,6 +62,19 @@ const Footer = () => {
             <h3>Contact Info</h3>
             <p>
               <span className="contact-icon">
+            <div className="footer-map-container">
+              <iframe
+                className="footer-map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127334.03264348!2d46.1021!2d5.5358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3d8b2e2e2e2e2e2e%3A0x8b8b8b8b8b8b8b8b!2sDhuusamareeb%2C%20Somalia!5e0!3m2!1sen!2s!4v1731608792332!5m2!1sen!2s"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Dhuusamreb Branch Map"
+                width="100%"
+                height="150"
+                style={{ border: 0, borderRadius: '8px', marginTop: '1rem' }}
+              ></iframe>
+            </div>
                 <MdLocationOn />
               </span>
               Mogadishu, Somalia

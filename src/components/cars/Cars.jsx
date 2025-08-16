@@ -37,20 +37,7 @@ const Cars = () => {
           category="renewable-energy"
         />
       </div>
-      <div className="services-grid-2">
-        <ServiceCard 
-          image={IMG6}
-          title="Mini-Grid Development"
-          description="Establishment of localized electricity grids powered by renewable energy sources for rural electrification."
-          category="renewable-energy"
-        />
-        <ServiceCard 
-          image={IMG7}
-          title="Energy Access Training"
-          description="Technical training programs for local technicians to maintain and operate renewable energy systems."
-          category="renewable-energy"
-        />
-      </div>
+  {/* Removed services-grid-2 as requested */}
     </div>
   );
 };
